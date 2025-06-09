@@ -168,7 +168,7 @@ def csvTechnicalSMA(ticker, time_interval, time_period, series_type, API_KEY):
             print('indicator in if statement: ',indicator,'\n')
             r = requests.get(url)
             data = r.json()
-            print(data,'\n')
+            # print(data,'\n')
             valuesList = list(data.values())
             data = valuesList[1]
 
@@ -231,7 +231,7 @@ API_KEY = 'GOIR6JKN4TW5HNGO'
 ticker = 'SPY'
 time_interval = 'daily'
 # # time_period = [10, 50, 200]
-time_period = 155
+time_period = 195
 # # series_type = ['close','open','high','low']
 series_type = 'close'
 csvTechnicalSMA(ticker, time_interval, time_period, series_type, API_KEY)
