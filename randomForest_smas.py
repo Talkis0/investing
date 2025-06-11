@@ -4,10 +4,12 @@ import requests
 import pandas as pd
 
 # Load the CSV file
-df = pd.read_csv('SMA_10.csv')
+
+file_name = "SMA_195.csv"
+df = pd.read_csv(file_name)
 
 # Reverse the DataFrame
 df = df.iloc[::-1].reset_index(drop=True)
 
 # Save it back to the same file
-df.to_csv('SMA_10.csv', index=False)
+df.to_csv(file_name, index=False)
